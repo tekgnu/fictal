@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %} Fictal Articles {% endblock %}
+
+{% block body %}
+	<h1>Articles</h1>
+	<ul class="list-group-flush">
+		{% for article in articles %}
+		<li class="list-group-item list-group-item-light">
+			<div class="col-md">
+				<div class="text-center4">{{ article.title }}</div>
+				<blockquote class="blockquote">{{ article.body}}</blockquote>
+				<footer class="blockquote-footer">by: {{ article.author }}</footer>
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+{% endblock %}
